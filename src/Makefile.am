@@ -14,7 +14,7 @@ libpion_la_SOURCES = \
 	http_parser.cpp http_plugin_server.cpp http_reader.cpp http_server.cpp \
 	http_types.cpp http_writer.cpp
 
-libpion_la_LDFLAGS = -no-undefined -release $(PION_LIBRARY_VERSION)
+libpion_la_LDFLAGS = -no-undefined -version-number $(subst .,:,$(PACKAGE_VERSION))
 libpion_la_LIBADD = @PION_EXTERNAL_LIBS@
 
 EXTRA_DIST = *.vcxproj *.vcxproj.filters
